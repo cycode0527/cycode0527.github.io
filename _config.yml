@@ -7,7 +7,7 @@ title: 大力书乔
 subtitle: Sxrhhh的小站
 description: Sxrhhh的小站
 keywords: Sxrhhh 
-author: Sxrhh
+author: Sxrhhh
 language: zh-CN
 timezone: 'Asia/Shanghai'
 
@@ -93,6 +93,13 @@ pagination_dir: page
 include:
 exclude:
 ignore:
+
+# excerpt description
+excerpt:
+  depth: 5  
+  excerpt_excludes: []
+  more_excludes: []
+  hideWholePostExcerpts: true
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
