@@ -893,6 +893,8 @@ vendors:
   # custom_cdn_url: https://cdnjs.cloudflare.com/ajax/libs/${cdnjs_name}/${version}/${cdnjs_file}
   custom_cdn_url:
 
+canvas_nest: true
+
 # Assets
 # Accelerate delivery of static files using a CDN
 # The js option is only valid when vendors.internal is local.
