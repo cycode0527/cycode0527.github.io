@@ -41,4 +41,240 @@
         <tag>介绍</tag>
       </tags>
   </entry>
+  <entry>
+    <title>关于管理编程社网站的知识与技巧（自用，必看）</title>
+    <url>/2022/05/10/%E5%85%B3%E4%BA%8E%E7%AE%A1%E7%90%86%E7%BC%96%E7%A8%8B%E7%A4%BE%E7%BD%91%E7%AB%99%E7%9A%84%E7%9F%A5%E8%AF%86%E4%B8%8E%E6%8A%80%E5%B7%A7%EF%BC%88%E8%87%AA%E7%94%A8%EF%BC%8C%E5%BF%85%E7%9C%8B%EF%BC%89/</url>
+    <content><![CDATA[<h1 id="关于管理编程社网站的知识与技巧（自用，必看）"><a href="#关于管理编程社网站的知识与技巧（自用，必看）" class="headerlink" title="关于管理编程社网站的知识与技巧（自用，必看）"></a>关于管理编程社网站的知识与技巧（自用，必看）</h1><blockquote>
+<p>最近呢，咱们编程社的网站终于是又修好了。趁着这个机会，笔者决定是要写一篇攻略，专门用于了解与锻炼建立网站的能力。所以，如果现在是你在管理编程社的网站，这些东西一定要看，以备不时之需。</p>
+</blockquote>
+<hr>
+<h2 id="1-使用LAMP建立网站"><a href="#1-使用LAMP建立网站" class="headerlink" title="1. 使用LAMP建立网站"></a>1. 使用LAMP建立网站</h2><h3 id="1-1-建站所需要的东西"><a href="#1-1-建站所需要的东西" class="headerlink" title="1.1 建站所需要的东西"></a>1.1 建站所需要的东西</h3><p>我们编程社的网站经历过云服务器，物理机器以及现在这种情况，理论上来讲，我们需要的是一个机器，云服务器（可以去阿里云买）会方便很多，但是由于经济关系我们可能需要在实体机上操作。为此，你还需要<strong>外网映射</strong>工具，例如<a href="https://www.natfrp.com/" title="SakuraFrp">SakuraFrp</a>。也不贵（目前），至少比服务器便宜，<del>反正编程社电费不要钱。</del><br>为了方便讲解，本攻略主要以试用的云服务器为例子，请自行为你的服务器套上外网映射。<br>另外，你也可以直接去阿里云的体验站体验一个小时的建站流程。<a href="https://developer.aliyun.com/adc/scenario/6869de098ad44fc8a1560a1836a7c5f2?spm=a2c6h.14164896.0.0.6caa7092Z4Gaf7" title="阿里云基于ECS搭建LAMP体验">阿里云基于ECS搭建LAMP体验</a></p>
+<p><a href="https://developer.aliyun.com/adc/scenario/fdecd528be6145dcbe747f0206e361f3?spm=a2c6h.14164896.0.0.6caa7092y3x20V" title="基于ECS搭建云上博客（体验时间更长些）">基于ECS搭建云上博客（体验时间更长些）</a></p>
+<h3 id="1-2-关于LAMP的总览和攻略推荐"><a href="#1-2-关于LAMP的总览和攻略推荐" class="headerlink" title="1.2 关于LAMP的总览和攻略推荐"></a>1.2 关于LAMP的总览和攻略推荐</h3><p>如果你很不幸，把网站搞砸了，或者是你想自己练习一下从头建站，那么请从这里开始看起。<br>LAMP全称“Linux， Apache， Mysql， PHP”，是建站必须要的。有关于LAMP搭建过程我不会过多描述，这里推荐一些攻略结合我的补充去看：</p>
+<ul>
+<li><a href="https://www.cycode.club/difang/centos7%e6%90%ad%e5%bb%balnmpwordpress-%e6%9c%ac%e7%ab%99%e7%8e%af%e5%a2%83%e6%90%ad%e5%bb%ba/" title="编程社原生LNMP攻略（方笛）">编程社原生LNMP攻略（方笛）</a></li>
+<li><a href="https://blog.csdn.net/hellooguys/article/details/106586982" title="手把手教你搭建LAMP（CSDN）">手把手教你搭建LAMP（CSDN）</a></li>
+</ul>
+<h3 id="1-3-开始安装LAMP"><a href="#1-3-开始安装LAMP" class="headerlink" title="1.3 开始安装LAMP"></a>1.3 开始安装LAMP</h3><h4 id="1-3-1-使用CentOS7作为Linux系统"><a href="#1-3-1-使用CentOS7作为Linux系统" class="headerlink" title="1.3.1 使用CentOS7作为Linux系统"></a>1.3.1 使用CentOS7作为Linux系统</h4><p><del>你既然再看这篇文章，应该不至于不知道Linux和CentOS是什么东西吧。不知道的赶紧回去恶补。</del><br>作为操作系统，笔者首选的就是CentOS。去年笔者使用了CentOS8作为操作系统，可惜因为不熟悉以及CentOS8退出了历史舞台，笔者走了很多弯路，以至于现在才修好网站。而CentOS7就会稳定很多，<strong>所以你现在需要准备一个CentOS7的镜像并把它装到电脑里，或者在购买云服务器的时候选择CentOS7</strong>。为了方便，你可以选择安装带GUI的服务器。<br>这里是推荐下载的镜像站，建议使用迅雷下载（至少快10倍，不需要会员）。<br><a href="https://mirrors.aliyun.com/centos/7.9.2009/isos/x86_64/CentOS-7-x86_64-Everything-2009.iso" title="阿里云镜像站CentOS7（点击下载）">阿里云镜像站CentOS7（点击下载）</a></p>
+<h4 id="1-3-2-连接到你的服务器"><a href="#1-3-2-连接到你的服务器" class="headerlink" title="1.3.2 连接到你的服务器"></a>1.3.2 连接到你的服务器</h4><p>你要在服务器上安装网站，你首先就要连接到你的服务器。我们用的是ssh连接法，方便极了。<br>关于ssh如何连接我不想多说什么，但是还是有几点需要注意：</p>
+<ol>
+<li>记得给你的服务器开放22端口，不然根本连接不进来。</li>
+<li>如果你用的是实体机，记得外网映射你的22端口，然后记住映射出的远程端口。</li>
+<li>ssh连接命令是<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh root@ssh.cycode.club <span class="comment">#使用云服务器并且绑定好了ssh的域名解析</span></span><br><span class="line">ssh -p xxxxx root@ssh.cycode.club <span class="comment">#使用实体机并用域名绑定好了映射ip，xxxxx是远程端口</span></span><br></pre></td></tr></table></figure></li>
+<li>我经常使用的ssh软件是git bash，非常好用，要资源的我这里直接放迅雷下载。<br><a href="https://pan.xunlei.com/s/VN-RwhkGtFJwb-mIcRZTt0A5A1" title="git下载（提取码8wcm）">git下载（提取码8wcm）</a></li>
+</ol>
+<h4 id="1-3-3-安装PHP"><a href="#1-3-3-安装PHP" class="headerlink" title="1.3.3 安装PHP"></a>1.3.3 安装PHP</h4><p>在安装之前，我们先要注意一下，CentOS7的yum源直接下载php最新版本是很难的，所以我们要换一下源。<br>参考资料：<a href="https://baijiahao.baidu.com/s?id=1700737064341435648&wfr=spider&for=pc" title="linux服务器将php5.6升到7.4">linux服务器将php5.6升到7.4</a><br>我们连接到服务器上，然后开始安装php<br>先进行换源：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum -y install epel-release</span><br><span class="line">yum -y install http://rpms.remirepo.net/enterprise/remi-release-7.rpm</span><br><span class="line">yum -y install yum-utils</span><br><span class="line">yum-config-manager --<span class="built_in">enable</span> remi-php74</span><br></pre></td></tr></table></figure>
+<p>注意最后那个php74可以改成目前最新版本，如php73，反正目前就只有74。但是其实php已经出到8了，但不用管，够用了。<br>然后就是<strong>安装php</strong>了</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install php php-opcache php-xml php-mcrypt php-gd php-devel php-mysql php-intl php-mbstring php-common php-cli php-gd php-curl -y</span><br></pre></td></tr></table></figure>
+<p>然后你就可以验证一下php了</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@iZuf6d7qoheo08v6guxb7uZ ~]# php -v</span><br><span class="line">PHP 5.4.16 (cli) (built: Apr  1 2020 04:07:17) </span><br><span class="line">Copyright (c) 1997-2013 The PHP Group</span><br><span class="line">Zend Engine v2.4.0, Copyright (c) 1998-2013 Zend Technologies</span><br><span class="line">    with Zend OPcache v7.0.5, Copyright (c) 1999-2015, by Zend Technologies</span><br></pre></td></tr></table></figure>
+<p>php安装完成！！！</p>
+<h4 id="1-3-4-安装Apache"><a href="#1-3-4-安装Apache" class="headerlink" title="1.3.4 安装Apache"></a>1.3.4 安装Apache</h4><p>安装apache会稍微简单一些，使用yum安装。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum -y install httpd</span><br></pre></td></tr></table></figure>
+<p>然后你就可以检查安装版本了：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@iZuf6hfqz99p7jcm2vgx2yZ ~]# httpd -v</span><br><span class="line">Server version: Apache/2.4.6 (CentOS)</span><br><span class="line">Server built:   Mar 24 2022 14:57:57</span><br></pre></td></tr></table></figure>
+<p>完成之后我们就要给它安装系统服务，让他能开机自启：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl <span class="built_in">enable</span> httpd &amp;&amp; systemctl start httpd</span><br></pre></td></tr></table></figure>
+<p>然后apache应该就启动成功了<br><img src="https://www.cycode.club/wp-content/uploads/2022/04/apache%E6%B5%8B%E8%AF%95.png"><br>好的，apache能启动，我们就先把它放一边了。</p>
+<ul>
+<li><strong>注意：Apache的默认站点位于“&#x2F;var &#x2F;www&#x2F;html”</strong><h4 id="1-3-5-安装MariaDB"><a href="#1-3-5-安装MariaDB" class="headerlink" title="1.3.5 安装MariaDB"></a>1.3.5 安装MariaDB</h4>对于数据库，我们一般用的是mysql，但是现在它已经变了，我们有了一个不错的新选择，那就是MariaDB。它的语法和文件存储位置和mysql几乎一样，所以不用担心学了MariaDB而不会mysql了。<br>执行命令：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum -y install mariadb-server</span><br></pre></td></tr></table></figure>
+安装完成，设置开机自启<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl <span class="built_in">enable</span> mariadb &amp;&amp; systemctl start mariadb</span><br></pre></td></tr></table></figure>
+然后我们就可以初始化数据库<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysql_secure_installation</span><br></pre></td></tr></table></figure></li>
+<li>这一段我不想再赘述太多，你们自己进入这个网页去看，把MariaDB装好来。<a href="https://blog.csdn.net/hellooguys/article/details/106586982" title="手把手教你搭建LAMP（CSDN）">手把手教你搭建LAMP（CSDN）</a></li>
+<li>一定要测试一下你能不能连接到数据库，这很重要，随后记住账户密码（账户一般是root，也可以跟随网上教程创立新的账户，<strong>这些要在后面建立wordpress博客站的时候用到</strong>）</li>
+</ul>
+<h2 id="2-添加wordpress"><a href="#2-添加wordpress" class="headerlink" title="2. 添加wordpress"></a>2. 添加wordpress</h2><h3 id="2-1-介绍wordpress"><a href="#2-1-介绍wordpress" class="headerlink" title="2.1 介绍wordpress"></a>2.1 介绍wordpress</h3><p>wordpress是一个建立博客网站的好帮手，有了它，不用学会php或者JavaScript也可以建立如同本站一样的网站。wordpress本质上是一个文件夹，你要把他放进 <strong>&#x2F;var&#x2F;www&#x2F;html</strong>中就可以使用了。</p>
+<h3 id="2-2-下载wordpress"><a href="#2-2-下载wordpress" class="headerlink" title="2.2 下载wordpress"></a>2.2 下载wordpress</h3><p>为了方便，我们可以在windows上先给他下载好在传进服务器里面。这里有一些下载渠道<br>官网下载：<a href="https://cn.wordpress.org/" title="中文版wordpress">中文版wordpress</a><br>迅雷网盘：<a href="https://pan.xunlei.com/s/VN-WBw3W9eURC0as92p-dFjqA1" title="迅雷网盘（提取码nega）">迅雷网盘（提取码nega）</a><br>由于我的网盘目前是最新版，但是不可能去给网盘继续更新内容，所以我的建议还是去官网下载，中文版方便一些，但是下载速度实在是感人，所以用迅雷下载官网文件是我最推荐的，几秒就下载好了。</p>
+<h3 id="2-3-导入wordpress"><a href="#2-3-导入wordpress" class="headerlink" title="2.3 导入wordpress"></a>2.3 导入wordpress</h3><h4 id="2-3-1-上传wordpress文件"><a href="#2-3-1-上传wordpress文件" class="headerlink" title="2.3.1 上传wordpress文件"></a>2.3.1 上传wordpress文件</h4><h5 id="2-3-1-1-下载FileZilla"><a href="#2-3-1-1-下载FileZilla" class="headerlink" title="2.3.1.1 下载FileZilla"></a>2.3.1.1 下载FileZilla</h5><p>如果没有问题，你现在下载下来的应该就是一个压缩包，请注意这个文件的后缀名，可能是.tar.gz，也可能是.zip。先不要管是什么，咱们要先想办法把它丢进<del>垃圾桶里面</del>。好吧，咱们要上传它。<br>我在这里推荐一个工具，叫做FileZilla，是使用ssh协议传输文件的，采用GUI界面，对新手友好。这里就直接放官网链接：</p>
+<ul>
+<li><a href="https://www.filezilla.cn/" title="FileZilla官网">FileZilla官网</a></li>
+<li><a href="https://download.filezilla.cn/client/windows/FileZilla_3.58.0_win32.zip" title="32位绿色版下载地址（点击下载）">32位绿色版下载地址（点击下载）</a></li>
+</ul>
+<p>选择绿色版会方便很多，因为这玩意不需要什么注册表，只是个工具。<br><strong>注意：不要下载服务器Server版本，那是给服务器用的，你下载客户端Client版本就可以了</strong></p>
+<h5 id="2-3-1-2-使用FileZilla"><a href="#2-3-1-2-使用FileZilla" class="headerlink" title="2.3.1.2 使用FileZilla"></a>2.3.1.2 使用FileZilla</h5><p>把FileZilla放在一个容易记的位置，然后就可以打开它。稍微摸索一下，你就在那里连接上服务器，<del>应该不会有人不会这些操作吧</del>。<br>然后你就可以开始上传了，使用界面大致如下图所示：<br><img src="https://www.cycode.club/wp-content/uploads/2022/04/%E4%BD%BF%E7%94%A8FileZilla.png"><br>然后你就可以看一下如何了</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@server ~]# pwd</span><br><span class="line">/root</span><br><span class="line">[root@server ~]# ls downloads/</span><br><span class="line">wordpress-5.9.3-zh_cn.zip</span><br></pre></td></tr></table></figure>
+<p>上传完成！</p>
+<h4 id="2-3-2-解压wordpress压缩包"><a href="#2-3-2-解压wordpress压缩包" class="headerlink" title="2.3.2 解压wordpress压缩包"></a>2.3.2 解压wordpress压缩包</h4><p>你可以看见，这是一个压缩包，但是我们要把它解压开来。正如之前所说的，他可能是两个格式，我这里只讲如何解压.zip格式的压缩包。<del>那还不是因为大家都选择官网上面最大的那个按钮</del></p>
+<h5 id="2-3-2-1-解压-zip压缩包"><a href="#2-3-2-1-解压-zip压缩包" class="headerlink" title="2.3.2.1 解压.zip压缩包"></a>2.3.2.1 解压.zip压缩包</h5><p><del>众所周知</del>，linux本身是不支持.zip格式的文件的，那是给windows用的。但是软件这个东西谁也说不好，这不，就有一个unzip的软件，我们直接来用。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum -y install unzip</span><br></pre></td></tr></table></figure>
+<p>然后进入你上传的目录，直接解压</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /root/downloads <span class="comment">#这个是我放压缩包的目录，你自己注意一下</span></span><br><span class="line">unzip wordpress-5.9.3-zh_cn.zip -d . <span class="comment">#解压到当前目录</span></span><br><span class="line"><span class="built_in">ls</span> <span class="comment">#看一下是不是多了一个文件夹</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>由于文件名很长，在解压的时候记得使用<strong>tab补全</strong>。</li>
+</ul>
+<h5 id="2-3-2-2-解压-tar-gz压缩包"><a href="#2-3-2-2-解压-tar-gz压缩包" class="headerlink" title="2.3.2.2 解压.tar.gz压缩包"></a>2.3.2.2 解压.tar.gz压缩包</h5><p>我不多说，你自己去看教程，大同小异</p>
+<h4 id="2-3-3-装载wordpress"><a href="#2-3-3-装载wordpress" class="headerlink" title="2.3.3 装载wordpress"></a>2.3.3 装载wordpress</h4><p>我们知道，apache网站的文件目录是在&#x2F;var&#x2F;www&#x2F;html下面，我们以后当然可以改，而且尽量要改，但是现在先这样。直接把wordpress文件夹复制到那里：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /root/downloads <span class="comment">#是自己处在压缩包的位置</span></span><br><span class="line"><span class="built_in">cp</span> -r wordpress/* -t /var/www/html/ <span class="comment">#将里面的文件全部复制到网站根目录</span></span><br></pre></td></tr></table></figure>
+<p>然后我们重启服务器看一下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apachectl restart <span class="comment">#重启apache</span></span><br></pre></td></tr></table></figure>
+<p>然后你再次访问网站，就可以看见wordpress的安装界面了</p>
+<h4 id="2-3-4-给文件夹授权"><a href="#2-3-4-给文件夹授权" class="headerlink" title="2.3.4 给文件夹授权"></a>2.3.4 给文件夹授权</h4><p>在安装前，我们要先做一件事，就是把&#x2F;var&#x2F;www&#x2F;html这个文件夹归为apache所有，这样能省很多事，要不然这个权限不够，那个无法写入，真的很烦人。<br>直接上命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /var/www/</span><br><span class="line"><span class="built_in">ls</span> -a <span class="comment">#显示详细信息，一般我们可以直接用ll作为命令</span></span><br><span class="line"><span class="comment">#不用看了，肯定左半边两大列的root</span></span><br><span class="line"><span class="built_in">chown</span> -R apache:apache . <span class="comment">#将整个文件夹全归apache所有</span></span><br><span class="line"><span class="built_in">ls</span> -a <span class="comment">#用ll再看一次，是不是全是apache了？</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-4-安装wordpress"><a href="#2-4-安装wordpress" class="headerlink" title="2.4 安装wordpress"></a>2.4 安装wordpress</h3><p>终于来到最重要的安装环节了，我们直接访问网站<br><img src="https://www.cycode.club/wp-content/uploads/2022/04/%E5%AE%89%E8%A3%85wordpress.png"><br>设置好一切，点击确定，然后你就会惊喜地发现——失败了。<br>其实是这样的，第一行的数据库名是要填写一个存在的空数据库，他不会帮我们建立，那我们就自己来。<br>直接连接到数据库：<code>mysql -u root -p</code><br>然后就直接建立数据库：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> DATABASE wordpress;</span><br></pre></td></tr></table></figure>
+<p>然后就可以了，点击确定重新安装wordpress<br>但是问题是，他又弹出来无法写入，这就很麻烦。你需要把它复制进里面。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> /var/www/html/wp-config-sample.php /var/www/html/wp-config.php</span><br><span class="line">vim /var/www/html/wp-config.php</span><br></pre></td></tr></table></figure>
+<p>注意vim的用法<br>然后你就可以修改里面的东西，应该不难</p>
+<p>最后点击继续，可以看到，我们的wordpress已经安装完成，准备就绪了。<br><img src="https://www.cycode.club/wp-content/uploads/2022/04/%E7%BD%91%E7%AB%99%E5%B0%B1%E7%BB%AA.png"></p>
+<h2 id="3-LAMP的进阶操作"><a href="#3-LAMP的进阶操作" class="headerlink" title="3. LAMP的进阶操作"></a>3. LAMP的进阶操作</h2><p>关于LAMP，我们只能说是 <strong>“装好了”</strong>，但是它属实不太好用，我们多半还是要配置的。举个例子：<strong>有的服务器它不止运行一个网站，有好几个网站，但是总不可能所有的文件全部都往&#x2F;var&#x2F;www&#x2F;html里面丢吧</strong>，所以，我们就有了很多事情要做。</p>
+<h3 id="3-1-为80端口配置虚拟主机"><a href="#3-1-为80端口配置虚拟主机" class="headerlink" title="3.1 为80端口配置虚拟主机"></a>3.1 为80端口配置虚拟主机</h3><p>众所周知，http传输协议使用的是80端口，如果你的防火墙不开放80端口，那么你压根就无法访问。现在，我们需要在apache中创建一个虚拟主机，这是一个单独的文件夹，比如说&#x2F;var&#x2F;www&#x2F;cycode.club，而不是默认路径，这样的话管理区来就方便。我们可以让它监听80端口。</p>
+<h4 id="3-1-1-为网站加上域名"><a href="#3-1-1-为网站加上域名" class="headerlink" title="3.1.1 为网站加上域名"></a>3.1.1 为网站加上域名</h4><p>在此之前，<strong>我们需要准备一个域名</strong>，比如你现在应该就掌管着cycode.club的域名。那么，你现在就去域名管理页（咱们是阿里云）去把它解析到我们的服务器。<br><img src="https://www.cycode.club/wp-content/uploads/2022/04/www%E8%AE%B0%E5%BD%95-298x300.png"> <img src="https://www.cycode.club/wp-content/uploads/2022/04/%E6%B7%BB%E5%8A%A0%E8%AE%B0%E5%BD%95-300x126.jpg"><br><img src="https://www.cycode.club/wp-content/uploads/2022/04/www%E8%AE%B0%E5%BD%95-298x300.png"><br>然后你在cmd里面ping一下，不用我教吧</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@VM-12-17-centos ~]# ping www.cycode.club</span><br><span class="line">PING www.cycode.club (43.138.157.164) 56(84) bytes of data.</span><br><span class="line">64 bytes from 43.138.157.164 (43.138.157.164): icmp_seq=1 ttl=63 time=0.380 ms</span><br><span class="line">64 bytes from 43.138.157.164 (43.138.157.164): icmp_seq=2 ttl=63 time=0.188 ms</span><br><span class="line">^C</span><br><span class="line">--- www.cycode.club ping statistics ---</span><br><span class="line">2 packets transmitted, 2 received, 0% packet loss, time 1001ms</span><br><span class="line">rtt min/avg/max/mdev = 0.188/0.284/0.380/0.096 ms</span><br></pre></td></tr></table></figure>
+<p>如果可以，你还可以这么干：<br><img src="https://www.cycode.club/wp-content/uploads/2022/04/%E9%87%8D%E5%AE%9A%E5%90%91-297x300.jpg"><br>如此一来，你在进入网站的时候就不用输入www了<br><strong>不过你现在暂时还不行，没看到记录值用的是https的网址吗。这个以后再讲，你现在就老老实实的去输入www或者暂时把https改成http</strong></p>
+<h4 id="3-1-2-在配置文件中设置域名"><a href="#3-1-2-在配置文件中设置域名" class="headerlink" title="3.1.2 在配置文件中设置域名"></a>3.1.2 在配置文件中设置域名</h4><p>参考资料：</p>
+<ul>
+<li><a href="https://help.aliyun.com/document_detail/98727.html" title="在apache服务器上安装ssl证书（阿里云）">在apache服务器上安装ssl证书（阿里云）</a></li>
+<li><a href="https://developer.aliyun.com/article/43188?spm=a2c6h.17698244.wenzhang.1.74b66765bTEQhg" title="apache虚拟主机的学习和应用（阿里云）">apache虚拟主机的学习和应用（阿里云）</a></li>
+</ul>
+<p>不懂没关系，现在还不用ssl，但是他能给笔者一些启发。<br>首先我们先要到httpd.conf中要求apache认可我们的配置文件–httpd-vhosts.conf</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/httpd/conf/httpd.conf</span><br></pre></td></tr></table></figure>
+<p>然后去掉Include conf&#x2F;extra&#x2F;httpd-vhosts.conf前的#<br><strong>等等，这句话在哪？？？</strong><br>事实上，我也找不到。一看，人家那是apache2。<del>我不懂，但我大受震撼</del>。既然如此， <strong>我们就把配置直接写在httpd.conf就好了</strong>。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/httpd/conf/httpd.conf</span><br></pre></td></tr></table></figure>
+<p>找一个恰当的位置，写入下列的配置，位置大概在<code>DocumentRoot &quot;/var/www/html&quot;</code>的附近就好。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">NameVirtualHost *:80</span><br><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">ServerAdmin webmaster@dummy-host.example.com</span><br><span class="line">DocumentRoot <span class="string">&quot;@@ServerRoot@@/docs/dummy-host.example.com&quot;</span></span><br><span class="line">ServerName dummy-host.example.com</span><br><span class="line">ServerAlias www.dummy-host.example.com</span><br><span class="line">Errorlog <span class="string">&quot;logs/dummy-host.example.com-error_log&quot;</span></span><br><span class="line">CustomLog <span class="string">&quot;logs/dummy-host.example.com-access_log&quot;</span> common</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
+<p><del>woc</del>，太多了，我看不懂，咋办？<br>没事，可以选择简单一点</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">NameVirtualHost *:80 </span><br><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">DocumentRoot <span class="string">&quot;/www/example.com&quot;</span></span><br><span class="line">ServerName www.example.com</span><br><span class="line">&lt;Directory /var/www/example.com&gt;</span><br><span class="line">AllowOverride All</span><br><span class="line">Require all granted</span><br><span class="line">&lt;/Directory&gt;</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>ServerAdmin管理员邮箱。<br>DocumentRoot网站目录（注意：如果网站目录中的路径有空格，请在路径两端加上双引号）。<br>ServerName要绑定的域名（必填）。<br>ServerAlias要绑定的虚拟主机的别名。（可选，如果多个域名，中间以空格分隔，如果没有，则去掉该行）。支持<em>，?两种通配符，比如</em>.abc.com，表示任意一个abc.com的二级域名都可访问。<br>CustomLog用户日志文件（可选，如果不需要，则去掉该行）。<br>ErrorLog 错误日志（可选，如果不需要，则去掉该行）。<br>Directory 设置一下网站文件夹的属性</p>
+</blockquote>
+<p>是不是感觉没变少？是我又加了Directory的属性，以后有用，现在先复制进去</p>
+<p>然后，我们就可以创建文件夹了</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /var/www/</span><br><span class="line"><span class="built_in">mkdir</span> cycode.club</span><br><span class="line"><span class="built_in">cp</span> -rf ./html -t ./cycode.club</span><br><span class="line"><span class="built_in">ls</span> cycode.club</span><br></pre></td></tr></table></figure>
+
+<p>看一看，是不是已经复制成功了？<br>然后，直接重启网站服务器，输入域名，然后直接开始。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apachectl restart</span><br><span class="line">curl http://www.cycode.club</span><br></pre></td></tr></table></figure>
+<p>当然你第二行也可以不输，直接在你自己的电脑上的浏览器里面，像平常访问其他网址一样访问咱们的网站。</p>
+<h3 id="3-2-为网站配置ssl证书"><a href="#3-2-为网站配置ssl证书" class="headerlink" title="3.2 为网站配置ssl证书"></a>3.2 为网站配置ssl证书</h3><p>如果你细心，你会发现，当你输入自己的网站的时候，上方就有一个“不安全”的字样，看起来非常难受。虽然说咱们这个网站也没有什么太贵重的东西，但你在网上上传下载的东西都被别人看到的感觉很不好，所以你需要准备ssl证书，才可以使用https访问。</p>
+<h4 id="3-2-1-申请免费证书"><a href="#3-2-1-申请免费证书" class="headerlink" title="3.2.1 申请免费证书"></a>3.2.1 申请免费证书</h4><p>要证书，咱们一般使用免费的，这里有两个方案，我一开始用的是第一种，后来则选用了第二种，更方便。</p>
+<h5 id="3-2-1-1-使用letsencrypt证书"><a href="#3-2-1-1-使用letsencrypt证书" class="headerlink" title="3.2.1.1 使用letsencrypt证书"></a>3.2.1.1 使用letsencrypt证书</h5><p><a href="https://letsencrypt.org/zh-cn/" title="letsencrypt官网">letsencrypt官网</a><br>说实话，我不太想讲，虽然这些都是英文的，但是这有点小复杂，我甚至因此把网站搞砸了。它是使用自动化的方式安装证书，不太好手动操控。这种东西手动操控可以了解到证书的使用方式。</p>
+<h5 id="3-2-1-2-使用阿里云免费ssl证书"><a href="#3-2-1-2-使用阿里云免费ssl证书" class="headerlink" title="3.2.1.2 使用阿里云免费ssl证书"></a>3.2.1.2 使用阿里云免费ssl证书</h5><p><strong>前排提醒：本章比较复杂，有什么不懂的直接看参考资料或者在评论区@我</strong></p>
+<p>其实你用腾讯云也没有问题，都有免费证书，大同小异，我这里以阿里云为例。</p>
+<ul>
+<li><a href="https://common-buy.aliyun.com/?spm=5176.b657008.0.0.4837799d2FxmLF&commodityCode=cas_dv_public_cn&request=%7B%22product%22:%22free_product%22%7D" title="阿里云免费证书申请页">阿里云免费证书申请页</a></li>
+<li><a href="https://help.aliyun.com/document_detail/156645.html" title="参考资料：阿里云免费证书操作指南">参考资料：阿里云免费证书操作指南</a></li>
+</ul>
+<p>进入这里，记得点击“DV单域名证书（免费试用）”，相信你也不会点错，<del>太贵了</del>。<br>跟着流程走，申请完毕，你就可以去操作它。<br>我的建议是，直接下载下来</p>
+<ul>
+<li><a href="https://help.aliyun.com/document_detail/98727.htm?spm=a2c4g.11186623.0.0.14ca3103tPyE1g#concept-zsp-d1x-yfb" title="参考资料：在Apache上安装SSL证书">参考资料：在Apache上安装SSL证书</a></li>
+</ul>
+<p><img src="https://www.cycode.club/wp-content/uploads/2022/04/%E4%B8%8B%E8%BD%BD%E8%AF%81%E4%B9%A6-300x124.png"><br><strong>注意选择的是apache服务器上的证书</strong><br>在你的电脑上解压好，把他们三改个名，去掉前面的数字加下划线<br><img src="https://www.cycode.club/wp-content/uploads/2022/04/%E9%87%8D%E5%91%BD%E5%90%8D%E8%AF%81%E4%B9%A6-300x44.png"><br>然后利用FileZilla把它传进服务器里面，我传入<code>/root/downloads/cert</code>。<strong>（建议你也这么传，以后有用，记得自己新建文件夹）</strong></p>
+<h4 id="3-2-2-安装证书"><a href="#3-2-2-安装证书" class="headerlink" title="3.2.2 安装证书"></a>3.2.2 安装证书</h4><p>你现在应该已经将文件上传到了服务器里，现在，我们把这些文件放在apache的安装目录<code>/etc/httpd/</code>下。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /root/downloads</span><br><span class="line"><span class="built_in">cp</span> -rf cert -t /etc/httpd/</span><br></pre></td></tr></table></figure>
+<p>好了，现在复制完成，我们要写一些配置文件，注意看好，有什么不懂的建议去看参考资料。</p>
+<h5 id="3-2-2-1-安装ssl模块"><a href="#3-2-2-1-安装ssl模块" class="headerlink" title="3.2.2.1 安装ssl模块"></a>3.2.2.1 安装ssl模块</h5><p>apache默认没有安装ssl模块，这坑了我好几天。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum -y install mod_ssl</span><br><span class="line">vim /etc/httpd/conf/httpd.conf</span><br></pre></td></tr></table></figure>
+<p>打开了vim，我们在之前添加虚拟主机的位置下面加上两行：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">LoadModule ssl_module modules/mod_ssl.so</span><br><span class="line">LoadModule rewrite_module modules/mod_rewrite.so</span><br></pre></td></tr></table></figure>
+<p>第二行暂时跟现在没关系，但以后有用，这次顺带写上。<br>这两行的作用就是加载apache的模块，方便使用ssl证书。</p>
+<h5 id="3-2-2-2-为443端口添加虚拟主机"><a href="#3-2-2-2-为443端口添加虚拟主机" class="headerlink" title="3.2.2.2 为443端口添加虚拟主机"></a>3.2.2.2 为443端口添加虚拟主机</h5><p>和之前一样，上次是80端口，这次是443端口给https用。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/httpd/conf/httpd.conf</span><br></pre></td></tr></table></figure>
+<p>然后在刚才添加加载模块的两行下面加上这么一块东西：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;VirtualHost *:443&gt;</span><br><span class="line">    ServerName www.cycode.club</span><br><span class="line">    DocumentRoot  /var/www/cycode.club</span><br><span class="line">    SSLEngine on</span><br><span class="line">    SSLProtocol all -SSLv2 -SSLv3</span><br><span class="line">    SSLCipherSuite HIGH:!RC4:!MD5:!aNULL:!eNULL:!NULL:!DH:!EDH:!EXP:+MEDIUM</span><br><span class="line">    SSLHonorCipherOrder on</span><br><span class="line">    SSLCertificateFile cert/www.cycode.club_public.crt</span><br><span class="line">    SSLCertificateKeyFile cert/www.cycode.club.key</span><br><span class="line">    SSLCertificateChainFile cert/www.cycode.club_chain.crt</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p> ServerName   #修改为申请证书时绑定的域名<br> DocumentRoot  &#x2F;var&#x2F;www&#x2F;example.com<br> SSLEngine on<br> SSLProtocol all -SSLv2 -SSLv3 # 添加SSL协议支持协议，去掉不安全的协议。<br> SSLCipherSuite HIGH:!RC4:!MD5:!aNULL:!eNULL:!NULL:!DH:!EDH:!EXP:+MEDIUM   # 修改加密套件。<br> SSLHonorCipherOrder on<br> SSLCertificateFile cert&#x2F;domain name1_public.crt   # 将domain name1_public.crt替换成您证书文件名。<br> SSLCertificateKeyFile cert&#x2F;domain name1.key   # 将domain name1.key替换成您证书的密钥文件名。<br> SSLCertificateChainFile cert&#x2F;domain name1_chain.crt  # 将domain name1_chain.crt替换成您证书的密钥文件名；证书链开头如果有#字符，请删除。</p>
+</blockquote>
+<p>然后在重启服务器，在网址栏里输入<a href="https://www.cycode.club/">https://www.cycode.club</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apachectl restart</span><br><span class="line">curl https://www.cycode.club</span><br></pre></td></tr></table></figure>
+
+<p>理论上应该是成功的，不行的话看看防火墙或是云服务器安全组设置。</p>
+<h5 id="3-2-2-3-设置强制https"><a href="#3-2-2-3-设置强制https" class="headerlink" title="3.2.2.3 设置强制https"></a>3.2.2.3 设置强制https</h5><p>这玩意就是说让你不管怎么输入网址都会让你用https登陆，好处就是方便，坏处就是网站崩了不太好修。当然我建议是加上强制跳转。<br>在之前80端口虚拟主机的位置&#x2F;Directory后，&#x2F;VirtualHost前的位置上加上几行</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">RewriteEngine on</span><br><span class="line">RewriteCond %&#123;SERVER_PORT&#125; !^443$</span><br><span class="line">RewriteRule ^(.*)$ https://%&#123;SERVER_NAME&#125;<span class="variable">$1</span> [L,R]</span><br></pre></td></tr></table></figure>
+<p>最后的结果就是这样：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">DocumentRoot /var/www/cycode.club</span><br><span class="line">ServerAlias www.cycode.club</span><br><span class="line">&lt;Directory /var/www/cycode.club&gt;</span><br><span class="line">AllowOverride All</span><br><span class="line">Require all granted</span><br><span class="line">&lt;/Directory&gt;</span><br><span class="line">RewriteEngine on</span><br><span class="line">RewriteCond %&#123;SERVER_PORT&#125; !^443$</span><br><span class="line">RewriteRule ^(.*)$ https://%&#123;SERVER_NAME&#125;<span class="variable">$1</span> [L,R]</span><br><span class="line">&lt;/VirtualHost&gt;</span><br><span class="line"></span><br><span class="line">LoadModule ssl_module modules/mod_ssl.so</span><br><span class="line">LoadModule rewrite_module modules/mod_rewrite.so</span><br><span class="line"></span><br><span class="line">&lt;VirtualHost *:443&gt;</span><br><span class="line">    ServerName www.cycode.club</span><br><span class="line">    DocumentRoot  /var/www/cycode.club</span><br><span class="line">    SSLEngine on</span><br><span class="line">    SSLProtocol all -SSLv2 -SSLv3</span><br><span class="line">    SSLCipherSuite HIGH:!RC4:!MD5:!aNULL:!eNULL:!NULL:!DH:!EDH:!EXP:+MEDIUM</span><br><span class="line">    SSLHonorCipherOrder on</span><br><span class="line">    SSLCertificateFile cert/www.cycode.club_public.crt</span><br><span class="line">    SSLCertificateKeyFile cert/www.cycode.club.key</span><br><span class="line">    SSLCertificateChainFile cert/www.cycode.club_chain.crt</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
+<p>这样就基本完工，记得重启服务器</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apachectl restart</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-搭建编程社网站"><a href="#4-搭建编程社网站" class="headerlink" title="4. 搭建编程社网站"></a>4. 搭建编程社网站</h2><p>作为服务器的管理者，你肯定要做的就是备份网站，咱们的服务器毕竟不是长期的，肯定要过期，那你就要做好备份还原的准备<br><strong>我在这里打个预防针，不知道为什么，不管使用哪种方法备份，备份文件的导出都是非常非常慢的，一般是中午去备份，晚上才好</strong></p>
+<h3 id="4-1-使用插件备份还原网站"><a href="#4-1-使用插件备份还原网站" class="headerlink" title="4.1 使用插件备份还原网站"></a>4.1 使用插件备份还原网站</h3><p>wordpress的插件很强大，有一些插件可以很方便的让你备份迁移网站，但很多都要钱，我这里会讲解一些插件，以及他们的利与弊。</p>
+<h4 id="4-1-1-使用All-in-one-migration插件"><a href="#4-1-1-使用All-in-one-migration插件" class="headerlink" title="4.1.1 使用All-in-one-migration插件"></a>4.1.1 使用All-in-one-migration插件</h4><p>这个插件，中文名“一站式迁移WP”，免费版限制很大。我这里会讲解如何使用好免费版<br><strong>前排提醒，腾讯云轻量应用服务器（目前测试出的）不支持在网站上长传512M以上文件，否则会封闭网站10分钟左右，救不回来。用腾讯云轻服的先跳过吧</strong></p>
+<h5 id="4-1-1-1-安装All-in-one-migration"><a href="#4-1-1-1-安装All-in-one-migration" class="headerlink" title="4.1.1.1 安装All-in-one-migration"></a>4.1.1.1 安装All-in-one-migration</h5><p>首先打开网站后台，点击左侧插件，选择“安装插件”，然后再右侧搜索框中输入<code>All-in-one-migration</code>，然后你就会看见下面有一个叫“一站式WP迁移”的（也有可能是英文名），直接点击安装，然后启用。</p>
+<h5 id="4-1-1-2-导出网站文件"><a href="#4-1-1-2-导出网站文件" class="headerlink" title="4.1.1.2 导出网站文件"></a>4.1.1.2 导出网站文件</h5><p>我们启用插件后，点击左侧的插件图标<del>（直接摆在列表里的）</del>，然后我们点击“导出”，点击绿色框框图标，选择“文件”。<br><img src="https://www.cycode.club/wp-content/uploads/2022/04/%E4%B8%80%E7%AB%99%E5%BC%8F%E8%BF%81%E7%A7%BB-300x182.png"><br>然后等待中间的框框加载完后，直接下载，速度真的很慢很慢。<br>下载下来后，我们就直接把它保存好，这是我们的根基之一<strong>以后网站三大根基，这个是可以完全恢复的而不至于是网站彻底消失</strong></p>
+<h5 id="4-1-1-3-导入恢复网站文件"><a href="#4-1-1-3-导入恢复网站文件" class="headerlink" title="4.1.1.3 导入恢复网站文件"></a>4.1.1.3 导入恢复网站文件</h5><p>这一步很重要，因为基础版的插件有个问题就是他只支持你网站直接导入而不支持恢复服务器上自己的备份，而<strong>腾讯云轻量应用服务器不支持网站上传过大，所以腾讯云轻服的可以先撤了</strong><br>我们点开“导入”，选择文件或直接拖入，然后你就会发现，文 件 竟 然 有 限 制。<br><img src="https://www.cycode.club/wp-content/uploads/2022/04/%E4%B8%80%E7%AB%99%E5%BC%8F%E5%AF%BC%E5%85%A5-300x154.png"><br>你要想，2M的限制给乞丐用啊！！！当然，这是我当初的想法，后来才知道，是我错怪了插件官方，来接着看如何解除限制：<br>你会在插件的帮助下看到3个方法：</p>
+<ol>
+<li>购买我们的插件（简单）</li>
+<li>联系你的主机服务商（中等）</li>
+<li>自己去修改上限（困难）</li>
+</ol>
+<p>很显然，他就是在骗你，我们去看看自己是如何修改的：<br><img src="https://www.cycode.club/wp-content/uploads/2022/04/lj%E6%8F%92%E4%BB%B6%E7%BB%99%E7%9A%84%E5%B8%AE%E5%8A%A9-300x214.png"><br>如果你去试了，你就会发现：一点用都没有<br><strong>记住，你自己就是主机服务商</strong><br>为什么呢：因为插件官网认为你的wordpress被限制了，所以上传不上去。事实上，咱们的wordpress根本没被限制，问题就出在wordpress的上级：<strong>PHP</strong><br>所以，我们要修改一下php的上传限制。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/php.ini</span><br></pre></td></tr></table></figure>
+<p>打开php的配置文件，我们将下面三条后面的限制全部加大：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">memory_limit = 1024M</span><br><span class="line">upload_max_filesize = 1024M</span><br><span class="line">post_max_size = 1024M</span><br></pre></td></tr></table></figure>
+<p>记得在vim中使用’?’来帮助自己查找上面三条。</p>
+<p>然后再重启服务器</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apachectl restart</span><br></pre></td></tr></table></figure>
+<p>看一下，文件上传限制是不是加大了。</p>
+<p>最后，当然是愉快地在All-in-one-migration中导入我们的网站还原咯。</p>
+<h5 id="4-1-1-4-All-in-one-migration的优缺点"><a href="#4-1-1-4-All-in-one-migration的优缺点" class="headerlink" title="4.1.1.4 All-in-one-migration的优缺点"></a>4.1.1.4 All-in-one-migration的优缺点</h5><p>本插件优点很明显：</p>
+<ol>
+<li>迁移网站方便，只需要导入和导出，不需要关注其他参数</li>
+<li>文件只有一个，管理方便。</li>
+</ol>
+<p>缺点也很突出：</p>
+<ol>
+<li>文件过大，下载真的很慢</li>
+<li>不允许还原本地的文件，一定要从外部上传，对于无法登入桌面并且限制文件上传大小的服务器来说，直接封死了这条路。</li>
+</ol>
+<h4 id="4-1-2-使用UpdraftPlus备份还原"><a href="#4-1-2-使用UpdraftPlus备份还原" class="headerlink" title="4.1.2 使用UpdraftPlus备份还原"></a>4.1.2 使用UpdraftPlus备份还原</h4><p>同样的，这个插件一样要钱<br>我打字打到一半，不想打了，这个插件我用的越来越少了，因为他无法迁移网站，你们自己去看攻略吧。<br><strong>updraft的备份文件分为五份，这是三大根基之二，处理好来可以拯救网站，但是处理不好可能会导致网站进不去，网页打不开，直接裂开</strong></p>
+<h3 id="4-2-直接导出网站所有数据（推荐）"><a href="#4-2-直接导出网站所有数据（推荐）" class="headerlink" title="4.2 直接导出网站所有数据（推荐）"></a>4.2 直接导出网站所有数据（推荐）</h3><p>这个方法一听就很土，但是确是我现在正在用的，需要的东西少，成功率高，多练习一下能帮助你更好的了解网站的存储结构。</p>
+<h4 id="4-2-1-了解wordpress的存储结构"><a href="#4-2-1-了解wordpress的存储结构" class="headerlink" title="4.2.1 了解wordpress的存储结构"></a>4.2.1 了解wordpress的存储结构</h4><p>要手撕wordpress文件，首先就要了解一下wordpress的文件里都存了些啥：</p>
+<p>咱们知道，在安装wordpress时要求连接到数据库。那么数据都放在数据库里了，wordpress文件又是什么，这里给张图：</p>
+<p><img src="https://www.cycode.club/wp-content/uploads/2022/04/image-20220424181022838.png" alt="image-20220424181022838"></p>
+<p>很显然，无论是数据库还是文件本体，都不能随意丢弃，那么我们就要都导出来</p>
+<h4 id="4-2-2-导出wordpress"><a href="#4-2-2-导出wordpress" class="headerlink" title="4.2.2 导出wordpress"></a>4.2.2 导出wordpress</h4><h5 id="4-2-2-1-导出wordpress本体"><a href="#4-2-2-1-导出wordpress本体" class="headerlink" title="4.2.2.1 导出wordpress本体"></a>4.2.2.1 导出wordpress本体</h5><p>在网站刚开始的时候，wordpress本体会比数据库大得多，文件又杂，如果你用FileZilla直接导出来的话，会很慢，所以我们需要对它进行压缩导出：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /var/www</span><br><span class="line">tar -zcvf cycode.club.tar.gz cycode.club #没有设置虚拟主机的，把cycode.club换成html</span><br><span class="line">ls</span><br></pre></td></tr></table></figure>
+
+<p>然后我们就可以看到有一个cycode.club.tar.gz，把它用filezilla导出到我们的电脑或是新服务器。<del>（可能还是很慢）</del></p>
+<h5 id="4-2-2-2-导出wordpress数据库"><a href="#4-2-2-2-导出wordpress数据库" class="headerlink" title="4.2.2.2 导出wordpress数据库"></a>4.2.2.2 导出wordpress数据库</h5><p>数据库同样是博客里很重要的一个东西，我们需要导出wordpress的数据库。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mysqldump -uroot -p wordpress &gt; wordpress.sql</span><br><span class="line">ls</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>mysqldump -u 用户名 -p 数据库名 &gt; 导出的文件名<br>　　mysqldump -u root -p db_name &gt; test_db.sql</p>
+</blockquote>
+<p>你看，你的当前目录下就有一个数据库文件了。用FileZilla导出来吧。</p>
+<h4 id="4-2-3-导入并还原wordpress"><a href="#4-2-3-导入并还原wordpress" class="headerlink" title="4.2.3 导入并还原wordpress"></a>4.2.3 导入并还原wordpress</h4><p>你现在已经拥有了cycode.club.tar.gz和wordpress.sql两个文件了，这就够了，丢进服务器</p>
+<h5 id="4-2-3-1-导入数据库"><a href="#4-2-3-1-导入数据库" class="headerlink" title="4.2.3.1 导入数据库"></a>4.2.3.1 导入数据库</h5><p>先导入数据库：</p>
+<blockquote>
+<p> 命令格式<br>mysql -u用户名 -p 数据库名 &lt; 数据库名.sql<br>范例：<br>mysql -uabc_f -p abc &lt; abc.sql<br>（导入数据库abc从abc.sql文件）</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mysql -uroot -p # 进入数据库，先创建数据库名为wordpress（存在的直接drop掉吧）</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">DROP</span> DATABASE wordpress;</span><br><span class="line"><span class="keyword">CREATE</span> DATABASE wordpress;</span><br><span class="line">quit</span><br></pre></td></tr></table></figure>
+
+<p>然后导入：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysql -uroot -p wordpress &lt; wordpress.sql</span><br></pre></td></tr></table></figure>
+
+<p>然后你就可以进入mysql看一眼了</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">USE DATABASE wordpress;</span><br><span class="line"><span class="keyword">SHOW</span> TABLES;</span><br></pre></td></tr></table></figure>
+
+<p>应该是成功了的。</p>
+<h5 id="4-2-3-2-导入wordpress本体文件"><a href="#4-2-3-2-导入wordpress本体文件" class="headerlink" title="4.2.3.2 导入wordpress本体文件"></a>4.2.3.2 导入wordpress本体文件</h5><p>这个应该不难理解，直接解压到<code>/var/www</code>下</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /root/downloads <span class="comment">#来到存放文件压缩包目录</span></span><br><span class="line">tar -xvf cycode.club.tar.gz -C /var/www <span class="comment">#直接放到www目录下</span></span><br></pre></td></tr></table></figure>
+
+<p>然后就是修改好文件夹的<strong>权限</strong>：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /var/www/</span><br><span class="line"><span class="built_in">chown</span> -R apache:apache cycode.club</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="4-2-3-3-检查其他的一些东西"><a href="#4-2-3-3-检查其他的一些东西" class="headerlink" title="4.2.3.3 检查其他的一些东西"></a>4.2.3.3 检查其他的一些东西</h5><p>既然你是直接迁移过来的，我的建议就是好好地检查一下配置文件，有几个点需要注意：</p>
+<ul>
+<li>apache配置文件，位置<code>/etc/httpd/conf/httpd.conf</code>,建议直接从原服务器拷贝，不拷贝的话记得写上<strong>80端口虚拟主机</strong>、<strong>443端口虚拟主机</strong>（<strong>域名和原来保持一致</strong>）、两个模块的加载（ssl_mod.so和rewrite_mod.so）</li>
+<li>ssl证书文件，可以重新下载也可以直接从原服务器下载下来，就3个文件，我是放在<code>/etc/httpd/cert</code>下面，<strong>位置记得保持不变</strong></li>
+<li>阿里云<strong>域名解析</strong>记得更改到新服务器上面，否则你的网站就会解析到原服务器上。</li>
+</ul>
+<p>最后就是重启服务器，上浏览器检查。</p>
+<hr>
+<p>本文章暂时保持更新，可以经常来这里看看哦</p>
+]]></content>
+      <categories>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>网站</tag>
+        <tag>网站管理</tag>
+        <tag>博客管理</tag>
+      </tags>
+  </entry>
 </search>
