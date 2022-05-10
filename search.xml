@@ -48,6 +48,8 @@
 <p>最近呢，咱们编程社的网站终于是又修好了。趁着这个机会，笔者决定是要写一篇攻略，专门用于了解与锻炼建立网站的能力。所以，如果现在是你在管理编程社的网站，这些东西一定要看，以备不时之需。</p>
 </blockquote>
 <hr>
+<span id="more"></span>
+
 <h2 id="1-使用LAMP建立网站"><a href="#1-使用LAMP建立网站" class="headerlink" title="1. 使用LAMP建立网站"></a>1. 使用LAMP建立网站</h2><h3 id="1-1-建站所需要的东西"><a href="#1-1-建站所需要的东西" class="headerlink" title="1.1 建站所需要的东西"></a>1.1 建站所需要的东西</h3><p>我们编程社的网站经历过云服务器，物理机器以及现在这种情况，理论上来讲，我们需要的是一个机器，云服务器（可以去阿里云买）会方便很多，但是由于经济关系我们可能需要在实体机上操作。为此，你还需要<strong>外网映射</strong>工具，例如<a href="https://www.natfrp.com/" title="SakuraFrp">SakuraFrp</a>。也不贵（目前），至少比服务器便宜，<del>反正编程社电费不要钱。</del><br>为了方便讲解，本攻略主要以试用的云服务器为例子，请自行为你的服务器套上外网映射。<br>另外，你也可以直接去阿里云的体验站体验一个小时的建站流程。<a href="https://developer.aliyun.com/adc/scenario/6869de098ad44fc8a1560a1836a7c5f2?spm=a2c6h.14164896.0.0.6caa7092Z4Gaf7" title="阿里云基于ECS搭建LAMP体验">阿里云基于ECS搭建LAMP体验</a></p>
 <p><a href="https://developer.aliyun.com/adc/scenario/fdecd528be6145dcbe747f0206e361f3?spm=a2c6h.14164896.0.0.6caa7092y3x20V" title="基于ECS搭建云上博客（体验时间更长些）">基于ECS搭建云上博客（体验时间更长些）</a></p>
 <h3 id="1-2-关于LAMP的总览和攻略推荐"><a href="#1-2-关于LAMP的总览和攻略推荐" class="headerlink" title="1.2 关于LAMP的总览和攻略推荐"></a>1.2 关于LAMP的总览和攻略推荐</h3><p>如果你很不幸，把网站搞砸了，或者是你想自己练习一下从头建站，那么请从这里开始看起。<br>LAMP全称“Linux， Apache， Mysql， PHP”，是建站必须要的。有关于LAMP搭建过程我不会过多描述，这里推荐一些攻略结合我的补充去看：</p>
@@ -276,5 +278,14 @@
         <tag>网站管理</tag>
         <tag>博客管理</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Metaweblog的java实现,从此上传博客实现全平台</title>
+    <url>/2022/05/10/Metaweblog%E7%9A%84java%E5%AE%9E%E7%8E%B0-%E4%BB%8E%E6%AD%A4%E4%B8%8A%E4%BC%A0%E5%8D%9A%E5%AE%A2%E5%AE%9E%E7%8E%B0%E5%85%A8%E5%B9%B3%E5%8F%B0/</url>
+    <content><![CDATA[<h1 id="Metaweblog的java实现-从此上传博客实现全平台"><a href="#Metaweblog的java实现-从此上传博客实现全平台" class="headerlink" title="Metaweblog的java实现,从此上传博客实现全平台"></a>Metaweblog的java实现,从此上传博客实现全平台</h1><p><a href="https://www.sxrhhh.top/JavaMetaweblogClient/">原网站</a></p>
+]]></content>
+      <categories>
+        <category>projects</category>
+      </categories>
   </entry>
 </search>
