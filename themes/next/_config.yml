@@ -104,6 +104,7 @@ menu:
   #sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404/ || fa fa-heartbeat
   projects: /categories/projects/ || fa fa-th-list
+  downloads: /categories/downloads/ || fa fa-download
 
 # Enable / Disable menu icons / item badges.
 menu_settings:
