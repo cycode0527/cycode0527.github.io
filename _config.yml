@@ -5,7 +5,7 @@
 # Site
 title: 大力书乔
 subtitle: Sxrhhh的小站
-description: Sxrhhh的小站
+description: 即使再小的帆,也能远航
 keywords: Sxrhhh 
 author: Sxrhhh
 language: zh-CN
@@ -13,7 +13,7 @@ timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://cycode0527.github.io
+url: http://www.sxrhhh.top
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -40,7 +40,13 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
+
+# asset_folder
 post_asset_folder: true
+marked:
+  prependRoot: true
+  postAsset: true
+
 relative_link: false
 future: true
 highlight:
@@ -100,6 +106,13 @@ excerpt:
   excerpt_excludes: []
   more_excludes: []
   hideWholePostExcerpts: true
+  
+# search
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/

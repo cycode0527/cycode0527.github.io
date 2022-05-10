@@ -1,0 +1,4 @@
+npm install hexo-excerpt --save
+npm install hexo-deployer-git --save
+npm install hexo-generator-searchdb --save
+npm install hexo-renderer-marked --save

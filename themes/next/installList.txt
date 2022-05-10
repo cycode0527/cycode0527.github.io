@@ -1,2 +1,0 @@
-npm install hexo-excerpt --save
-npm install hexo-deployer-git --save
