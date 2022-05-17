@@ -280,9 +280,15 @@
       </tags>
   </entry>
   <entry>
-    <title>Metaweblog的java实现,从此上传博客实现全平台</title>
-    <url>/2022/05/10/Metaweblog%E7%9A%84java%E5%AE%9E%E7%8E%B0-%E4%BB%8E%E6%AD%A4%E4%B8%8A%E4%BC%A0%E5%8D%9A%E5%AE%A2%E5%AE%9E%E7%8E%B0%E5%85%A8%E5%B9%B3%E5%8F%B0/</url>
-    <content><![CDATA[<h1 id="Metaweblog的java实现-从此上传博客实现全平台"><a href="#Metaweblog的java实现-从此上传博客实现全平台" class="headerlink" title="Metaweblog的java实现,从此上传博客实现全平台"></a>Metaweblog的java实现,从此上传博客实现全平台</h1><p><a href="https://www.sxrhhh.top/JavaMetaweblogClient/">原网站</a></p>
+    <title>JavaMetaweblogClient,Metaweblog的java实现,从此上传博客实现全平台</title>
+    <url>/2022/05/10/JavaMetaweblogClient,Metaweblog%E7%9A%84java%E5%AE%9E%E7%8E%B0-%E4%BB%8E%E6%AD%A4%E4%B8%8A%E4%BC%A0%E5%8D%9A%E5%AE%A2%E5%AE%9E%E7%8E%B0%E5%85%A8%E5%B9%B3%E5%8F%B0/</url>
+    <content><![CDATA[<h1 id="JavaMetaweblogClient-Metaweblog的java实现-从此上传博客实现全平台"><a href="#JavaMetaweblogClient-Metaweblog的java实现-从此上传博客实现全平台" class="headerlink" title="JavaMetaweblogClient,Metaweblog的java实现,从此上传博客实现全平台"></a>JavaMetaweblogClient,Metaweblog的java实现,从此上传博客实现全平台</h1><blockquote>
+<p>不知你是否会遇到下面这样的情况:想要通过java上传博客,结果却发现api的使用有些复杂。没关系，这里帮你解决了api的问题。在使用Metaweblog的时候，只需要调用网页上同名的方法就好了，一键发送命令，感受调用api的快感。</p>
+</blockquote>
+<hr>
+<p><a href="https://www.sxrhhh.top/JavaMetaweblogClient">查看项目原网站</a></p>
+<span id="more"></span>
+
 ]]></content>
       <categories>
         <category>projects</category>
